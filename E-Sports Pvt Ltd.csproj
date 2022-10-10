@@ -1,0 +1,279 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B97B31CD-D122-496E-ABA9-2D60FD7892A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_Sports_Pvt_Ltd</RootNamespace>
+    <AssemblyName>E-Sports Pvt Ltd</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44329</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\StyleSheet1.css" />
+    <Content Include="Pages\admin\admindashboard.aspx" />
+    <Content Include="Pages\admin\adminlogin.aspx" />
+    <Content Include="Pages\admin\auction.aspx" />
+    <Content Include="Pages\admin\manageplayers.aspx" />
+    <Content Include="Pages\admin\manage_team.aspx" />
+    <Content Include="Pages\admin\manage_trophy.aspx" />
+    <Content Include="Pages\index.aspx" />
+    <Content Include="Pages\player\dashboard.aspx" />
+    <Content Include="Pages\player\playerapply.aspx" />
+    <Content Include="Pages\player\playerlogin.aspx" />
+    <Content Include="Pages\player\playerregister.aspx" />
+    <Content Include="Pages\player\viewplayers.aspx" />
+    <Content Include="Pages\player\viewtrophy.aspx" />
+    <Content Include="Pages\team\auction.aspx" />
+    <Content Include="Pages\team\manageteam.aspx" />
+    <Content Include="Pages\team\teamdashboard.aspx" />
+    <Content Include="Pages\team\teamlogin.aspx" />
+    <Content Include="Pages\team\viewplayers.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Master\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\admindashboard.aspx.cs">
+      <DependentUpon>admindashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\admindashboard.aspx.designer.cs">
+      <DependentUpon>admindashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\auction.aspx.cs">
+      <DependentUpon>auction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\auction.aspx.designer.cs">
+      <DependentUpon>auction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\manageplayers.aspx.cs">
+      <DependentUpon>manageplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\manageplayers.aspx.designer.cs">
+      <DependentUpon>manageplayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\manage_team.aspx.cs">
+      <DependentUpon>manage_team.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\manage_team.aspx.designer.cs">
+      <DependentUpon>manage_team.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\manage_trophy.aspx.cs">
+      <DependentUpon>manage_trophy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\manage_trophy.aspx.designer.cs">
+      <DependentUpon>manage_trophy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\playerapply.aspx.cs">
+      <DependentUpon>playerapply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\playerapply.aspx.designer.cs">
+      <DependentUpon>playerapply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\playerlogin.aspx.cs">
+      <DependentUpon>playerlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\playerlogin.aspx.designer.cs">
+      <DependentUpon>playerlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\playerregister.aspx.cs">
+      <DependentUpon>playerregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\playerregister.aspx.designer.cs">
+      <DependentUpon>playerregister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\viewplayers.aspx.cs">
+      <DependentUpon>viewplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\viewplayers.aspx.designer.cs">
+      <DependentUpon>viewplayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\player\viewtrophy.aspx.cs">
+      <DependentUpon>viewtrophy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\player\viewtrophy.aspx.designer.cs">
+      <DependentUpon>viewtrophy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\auction.aspx.cs">
+      <DependentUpon>auction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\auction.aspx.designer.cs">
+      <DependentUpon>auction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\manageteam.aspx.cs">
+      <DependentUpon>manageteam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\manageteam.aspx.designer.cs">
+      <DependentUpon>manageteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\teamdashboard.aspx.cs">
+      <DependentUpon>teamdashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\teamdashboard.aspx.designer.cs">
+      <DependentUpon>teamdashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\teamlogin.aspx.cs">
+      <DependentUpon>teamlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\teamlogin.aspx.designer.cs">
+      <DependentUpon>teamlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\viewplayers.aspx.cs">
+      <DependentUpon>viewplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\viewplayers.aspx.designer.cs">
+      <DependentUpon>viewplayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\Layout.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+    <Folder Include="Pages\player\img\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59970</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44329/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
