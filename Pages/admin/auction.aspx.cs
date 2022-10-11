@@ -99,5 +99,80 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
             GridView2.DataBind();
             conn.Close();
         }
+
+        protected void unsold_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update player set status='" + "unsold" + "' where  status='" + "live" + "'";
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            loadauction();
+            load();
+            msg.Text = "Player Unsold";
+
+        }
+
+        protected void sold_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                msg.Text = "";
+                conn.Open();
+
+
+                string query = "select * from player where status = '" + "live" + "'";
+
+                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+                DataTable dt1 = new DataTable();
+                sda.Fill(dt1);
+
+                foreach (DataRow dr in dt1.Rows)
+                {
+                    string teambalance = dr["amount"].ToString();
+                    string teamid = dr["team_id"].ToString();
+
+                    int teams = int.Parse(teamid);
+                    int amount = int.Parse(teambalance);
+
+                    string ques = "select * from team where team_id = '" + teams + "'";
+                    SqlDataAdapter sdd = new SqlDataAdapter(ques, conn);
+                    DataTable dt = new DataTable();
+                    sdd.Fill(dt);
+                    foreach (DataRow ds in dt.Rows)
+                    {
+                        string maxamount = ds["max_amount"].ToString();
+                        int maxim = int.Parse(maxamount);
+
+                        int total = maxim - amount;
+
+                        SqlCommand cmd2 = conn.CreateCommand();
+                        cmd2.CommandType = CommandType.Text;
+                        cmd2.CommandText = "update team set max_amount ='" + total + "' where team_id = '" + teams + "'";
+                        cmd2.ExecuteNonQuery();
+
+                    }
+
+                }
+
+
+                SqlCommand cmd1 = conn.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "update player set  status ='" + "sold" + "' where status = '" + "live" + "'";
+                cmd1.ExecuteNonQuery();
+                msg.Text = "Player Sold && Select Next Player";
+
+                conn.Close();
+                loadauction();
+                load();
+            }
+
+            catch (Exception ex)
+            {
+                msg.Text = ex.Message;
+            }
+        }
     }
 }

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Player Login</title>
  
 
     
@@ -112,7 +112,7 @@ body {
 
     
          <div class="input-parent">
-      <label for="username">Username </label>
+      <label for="username">Username</label>
       ><asp:TextBox ID="username" runat="server"></asp:TextBox>
     </div>
         

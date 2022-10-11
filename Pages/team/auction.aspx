@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Auction</title>
+     <meta http-equiv="refresh" content="10"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -108,19 +109,21 @@ background: #82b534;
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="teamdashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Manage Trophy</a></li>
-         <li class="active"><a href="#">Manage Players Request</a></li>
-         <li class="active"><a href="#">Manage Team</a></li>
-         <li class="active"><a href="#">Manage Auction</a></li>
-         <li class="active"><a href="#">Manage Reports</a></li>
+     <li class="active"><a href="auction.aspx">Auction</a></li>
+         <li class="active"><a href="viewplayers.aspx">View all Registered Players</a></li>
+         <li class="active"><a href="manageteam.aspx">Manage Team</a></li>
+         <li class="active"><a href="Soldunsold.aspx">View Sold/Unsold Players</a></li>
+        
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li style="color:aliceblue; top: 0px; left: 14px; width: 71px; height: 31px;">  <asp:Label ID="name" runat="server"></asp:Label> </li>
-     
+      
+        <li><asp:Label ID="uname" runat="server" style="color: #FFFFFF"></asp:Label></li>
+
       <li><a href="../index.aspx">
           
           

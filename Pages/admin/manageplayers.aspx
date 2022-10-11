@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title> Manage Players</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -131,14 +131,23 @@ background: #82b534;
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="admindashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="manage_trophy.aspx">Manage Trophy</a></li>
-         <li class="active"><a href="#">Manage Players Request</a></li>
+         <li class="active"><a href="manageplayers.aspx">Manage Players Request</a></li>
          <li class="active"><a href="manage_team.aspx">Manage Team</a></li>
-         <li class="active"><a href="#">Manage Auction</a></li>
-         <li class="active"><a href="#">Manage Reports</a></li>
+         <li class="active"><a href="auction.aspx">Manage Auction</a></li>
+         <li class="active"><a href="viewplayer.aspx">View Sold/Unsold Players</a></li>
+        <li class="dropdown active ">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage Reports
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="soldplayers.aspx">Sold Players</a></li>
+          <li><a href="unsoldplayers.aspx">Unsold Players</a></li>
+          <li><a href="rejectedplayers.aspx">Rejected Players</a></li>
+        </ul>
+        
       
     </ul>
     <ul class="nav navbar-nav navbar-right">

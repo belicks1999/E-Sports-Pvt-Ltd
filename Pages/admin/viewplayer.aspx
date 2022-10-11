@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="manageteam.aspx.cs" Inherits="E_Sports_Pvt_Ltd.Pages.team.manageteam" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewplayer.aspx.cs" Inherits="E_Sports_Pvt_Ltd.Pages.admin.viewplayer" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sold/Unsold Players</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -27,112 +28,29 @@
             background-color:aqua;
         }
     </style>
-    <title>Manage Team</title>
-     <style>
-       html, body {
-min-height: 100%;
-}
-body, div, form, input, select, p { 
-padding: 0;
-margin: 0;
-outline: none;
-font-family: Roboto, Arial, sans-serif;
-font-size: 14px;
-color: #666;
-}
-h1 {
-margin: 0;
-font-weight: 400;
-}
-h3 {
-margin: 12px 0;
-color: #8ebf42;
-}
-.main-block {
-display: flex;
-justify-content: center;
-align-items: center;
-background: #fff;
-}
-form {
-width: 100%;
-padding: 20px;
-}
-fieldset {
-border: none;
-border-top: 1px solid #8ebf42;
-}
-.account-details, .personal-details {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-}
-.account-details >div, .personal-details >div >div {
-display: flex;
-align-items: center;
-margin-bottom: 10px;
-}
-.account-details >div, .personal-details >div, input, label {
-width: 100%;
-}
-label {
-padding: 0 5px;
-text-align: right;
-vertical-align: middle;
-}
-input {
-padding: 5px;
-vertical-align: middle;
-}
-.checkbox {
-margin-bottom: 10px;
-}
-
-button {
-width: 10%;
-padding: 10px 0;
-margin: 10px auto;
-border-radius: 5px; 
-border: none;
-background: #8ebf42; 
-font-size: 14px;
-font-weight: 600;
-color: #fff;
-
-}
-button:hover {
-background: #82b534;
-}
-        @media (min-width: 568px) {
-            .account-details > div, .personal-details > div {
-                width: 50%;
-            }
-
-            label {
-                width: 40%;
-            }
-
-            input {
-                width: 100%;
-            }
-        }
-
-
-    </style>
 </head>
 <body style="background-color:antiquewhite;">
-    
+    <form id="form1" runat="server">
         <div>
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="teamdashboard.aspx">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="admindashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="auction.aspx">Auction</a></li>
-         <li class="active"><a href="viewplayers.aspx">View all Registered Players</a></li>
-         <li class="active"><a href="manageteam.aspx">Manage Team</a></li>
-        <li class="active"><a href="Soldunsold.aspx">View Sold/Unsold Players</a></li>
+           <li class="active"><a href="manage_trophy.aspx">Manage Trophy</a></li>
+         <li class="active"><a href="manageplayers.aspx">Manage Players Request</a></li>
+         <li class="active"><a href="manage_team.aspx">Manage Team</a></li>
+         <li class="active"><a href="auction.aspx">Manage Auction</a></li>
+         <li class="active"><a href="viewplayer.aspx">View Sold/Unsold Players</a></li>
+        <li class="dropdown active ">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage Reports
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="soldplayers.aspx">Sold Players</a></li>
+          <li><a href="unsoldplayers.aspx">Unsold Players</a></li>
+          <li><a href="rejectedplayers.aspx">Rejected Players</a></li>
+        </ul>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -144,33 +62,8 @@ background: #82b534;
   </div>
 </nav>
 
-<div class="main-block">
-    <form id="form2" runat="server">
-<h1>Your Team Details</h1>
-
-<legend>
-<h3>View Details</h3>
-</legend>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="msg" runat="server" Text="" style="font-size: x-large; color: #FF0000"></asp:Label>
-<div class="account-details">
-    
-<div><label>Team Name</label><asp:TextBox ID="tname" runat="server" ReadOnly="True"></asp:TextBox></div>
-<div><label>Trophy ID</label><asp:TextBox ID="troname" runat="server" ReadOnly="True"></asp:TextBox></div>
-<div><label>Team Owner</label> <asp:TextBox ID="owner" runat="server" ReadOnly="True"></asp:TextBox></div>
-<div><label>Team Balance(USD)</label> <asp:TextBox ID="balace" runat="server" ReadOnly="True"></asp:TextBox></div>
-</div>
-        <br />
-            
-             <br />
-             <br />
-           
-
-    <div class="main-block">
-        
-        <h1>Your Team Players</h1>
-</div>
-        <asp:GridView ID="GridView2" runat="server" BackColor="#CCCCCC" HorizontalAlign="Center" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="165px" Width="1121px" AutoGenerateColumns="False">
+ <h3 style="text-align:center;color:black;">All Sold/Unsold Players</h3>
+                 <asp:GridView ID="GridView2" runat="server" BackColor="#CCCCCC" HorizontalAlign="Center" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="165px" Width="1121px" AutoGenerateColumns="False">
                      <Columns>
                          <asp:BoundField DataField="name" HeaderText="Name" />
                          <asp:BoundField DataField="tro_id" HeaderText="Trophy ID" />
@@ -201,33 +94,30 @@ background: #82b534;
                      <SortedDescendingHeaderStyle BackColor="#383838" />
                  </asp:GridView>
              <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
             
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-             <br />
-
-   
 
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->

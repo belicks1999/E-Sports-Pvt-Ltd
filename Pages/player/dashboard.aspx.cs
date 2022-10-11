@@ -11,7 +11,7 @@ namespace E_Sports_Pvt_Ltd.Pages.player
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            uname.Text = "Hello " + Session["playername"].ToString();
         }
     }
 }

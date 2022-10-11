@@ -4,8 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Auction</title>
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="5"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -26,6 +27,7 @@
         .auto-style1 {
             font-size: medium;
         }
+     
     </style>
 </head>
 <body style="background-color:antiquewhite;">
@@ -34,14 +36,22 @@
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="admindashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Manage Trophy</a></li>
-         <li class="active"><a href="#">Manage Players Request</a></li>
-         <li class="active"><a href="#">Manage Team</a></li>
-         <li class="active"><a href="#">Manage Auction</a></li>
-         <li class="active"><a href="#">Manage Reports</a></li>
+            <li class="active"><a href="manage_trophy.aspx">Manage Trophy</a></li>
+         <li class="active"><a href="manageplayers.aspx">Manage Players Request</a></li>
+         <li class="active"><a href="manage_team.aspx">Manage Team</a></li>
+         <li class="active"><a href="auction.aspx">Manage Auction</a></li>
+         <li class="active"><a href="viewplayer.aspx">View Sold/Unsold Players</a></li>
+        <li class="dropdown active ">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Manage Reports
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="soldplayers.aspx">Sold Players</a></li>
+          <li><a href="unsoldplayers.aspx">Unsold Players</a></li>
+          <li><a href="rejectedplayers.aspx">Rejected Players</a></li>
+        </ul>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -76,7 +86,10 @@ font-size: 14px;
 font-weight: 600;
 color: #fff;" runat="server" Text="Submit" OnClick="add_btn_Click1"   />
 
-        <h1>Live Auction - Player<asp:Label ID="msg" runat="server"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="msg" runat="server" style="text-align: center; font-size: x-large; color: #CC3300"></asp:Label>
+
+        <h1 style="text-align:center;">Live Auction - Player
         </h1>
         <p>
             <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" Width="878px">
@@ -92,6 +105,7 @@ color: #fff;" runat="server" Text="Submit" OnClick="add_btn_Click1"   />
                     </asp:TemplateField>
                     <asp:BoundField DataField="base_price" HeaderText="Base Price" />
                     <asp:BoundField DataField="amount" HeaderText="Current Bid" />
+                    <asp:BoundField DataField="team_id" HeaderText="Team ID" />
                     <asp:BoundField DataField="team_name" HeaderText="Team Name" />
                 </Columns>
                 <FooterStyle BackColor="#CCCCCC" />
@@ -105,7 +119,15 @@ color: #fff;" runat="server" Text="Submit" OnClick="add_btn_Click1"   />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
         </p>
-        <h1>All Players</h1>
+        <div class="col text-center">
+        <asp:Button ID="sold"  class="btn btn-success btn-lg" runat="server" Text="SOLD" OnClick="sold_Click" />
+        <asp:Button ID="unsold" class="btn btn-danger btn-lg" runat="server" Text="UNSOLD" OnClick="unsold_Click" />
+        </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <h1 style="text-align:center;">Upcomming Players</h1>
 
 
 

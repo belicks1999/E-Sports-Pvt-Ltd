@@ -4,7 +4,7 @@
 
 
 <head runat="server">
-    <title></title>
+    <title>Player Dashboard</title>
      <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -46,6 +46,9 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
      
+      <li>
+      
+          <li><asp:Label ID="uname" runat="server"  style="color: #FFFFFF"></asp:Label></li>
       <li><a href="../index.aspx"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
          
     </ul>

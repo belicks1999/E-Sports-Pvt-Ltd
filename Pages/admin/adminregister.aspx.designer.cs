@@ -11,7 +11,7 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
 {
 
 
-    public partial class auction
+    public partial class adminregister
     {
 
         /// <summary>
@@ -24,40 +24,13 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
         protected global::System.Web.UI.WebControls.Label name;
 
         /// <summary>
-        /// form1 control.
+        /// main control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// trophy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList trophy;
-
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-
-        /// <summary>
-        /// add_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button add_btn;
+        protected global::System.Web.UI.HtmlControls.HtmlForm main;
 
         /// <summary>
         /// msg control.
@@ -69,39 +42,48 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
         protected global::System.Web.UI.WebControls.Label msg;
 
         /// <summary>
-        /// GridView2 control.
+        /// name1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.TextBox name1;
 
         /// <summary>
-        /// sold control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button sold;
+        protected global::System.Web.UI.WebControls.TextBox username;
 
         /// <summary>
-        /// unsold control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button unsold;
+        protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
-        /// GridView1 control.
+        /// mobile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox mobile;
+
+        /// <summary>
+        /// reg_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button reg_btn;
     }
 }

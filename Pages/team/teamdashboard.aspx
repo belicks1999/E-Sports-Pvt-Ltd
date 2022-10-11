@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Dashboard</title>
      <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -36,12 +36,13 @@
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="teamdashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="auction.aspx">Auction</a></li>
-         <li class="active"><a href="viewplayers.aspx">View all Players</a></li>
+         <li class="active"><a href="viewplayers.aspx">View all Registered Players</a></li>
          <li class="active"><a href="manageteam.aspx">Manage Team</a></li>
+        <li class="active"><a href="Soldunsold.aspx">View Sold/Unsold Players</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -53,7 +54,7 @@
   </div>
 </nav>
 
-  <img src="\images\ban1.png" class="img-fluid" style="width: 100%" alt="Wild Landscape" /><br />         
+  <img src="\images\ban4.png" class="img-fluid" style="width: 100%" alt="Wild Landscape" /><br />         
 
 <footer class="bg-dark text-center text-white">
   <!-- Grid container -->

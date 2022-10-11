@@ -7,12 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace E_Sports_Pvt_Ltd.Pages.player
+namespace E_Sports_Pvt_Ltd.Pages.admin
 {
 
 
-    public partial class dashboard
+    public partial class unsoldplayers
     {
+
+        /// <summary>
+        /// name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label name;
 
         /// <summary>
         /// form1 control.
@@ -24,12 +33,21 @@ namespace E_Sports_Pvt_Ltd.Pages.player
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// uname control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label uname;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
+
+        /// <summary>
+        /// sold control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button sold;
     }
 }

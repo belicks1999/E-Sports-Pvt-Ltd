@@ -70,10 +70,15 @@
     <Content Include="css\StyleSheet1.css" />
     <Content Include="Pages\admin\admindashboard.aspx" />
     <Content Include="Pages\admin\adminlogin.aspx" />
+    <Content Include="Pages\admin\adminregister.aspx" />
     <Content Include="Pages\admin\auction.aspx" />
     <Content Include="Pages\admin\manageplayers.aspx" />
+    <Content Include="Pages\admin\rejectedplayers.aspx" />
+    <Content Include="Pages\admin\soldplayers.aspx" />
     <Content Include="Pages\admin\manage_team.aspx" />
     <Content Include="Pages\admin\manage_trophy.aspx" />
+    <Content Include="Pages\admin\unsoldplayers.aspx" />
+    <Content Include="Pages\admin\viewplayer.aspx" />
     <Content Include="Pages\index.aspx" />
     <Content Include="Pages\player\dashboard.aspx" />
     <Content Include="Pages\player\playerapply.aspx" />
@@ -83,6 +88,7 @@
     <Content Include="Pages\player\viewtrophy.aspx" />
     <Content Include="Pages\team\auction.aspx" />
     <Content Include="Pages\team\manageteam.aspx" />
+    <Content Include="Pages\team\Soldunsold.aspx" />
     <Content Include="Pages\team\teamdashboard.aspx" />
     <Content Include="Pages\team\teamlogin.aspx" />
     <Content Include="Pages\team\viewplayers.aspx" />
@@ -110,6 +116,13 @@
     <Compile Include="Pages\admin\adminlogin.aspx.designer.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\admin\adminregister.aspx.cs">
+      <DependentUpon>adminregister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\adminregister.aspx.designer.cs">
+      <DependentUpon>adminregister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\admin\auction.aspx.cs">
       <DependentUpon>auction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,6 +137,20 @@
     <Compile Include="Pages\admin\manageplayers.aspx.designer.cs">
       <DependentUpon>manageplayers.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\admin\rejectedplayers.aspx.cs">
+      <DependentUpon>rejectedplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\rejectedplayers.aspx.designer.cs">
+      <DependentUpon>rejectedplayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\soldplayers.aspx.cs">
+      <DependentUpon>soldplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\soldplayers.aspx.designer.cs">
+      <DependentUpon>soldplayers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\admin\manage_team.aspx.cs">
       <DependentUpon>manage_team.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -137,6 +164,20 @@
     </Compile>
     <Compile Include="Pages\admin\manage_trophy.aspx.designer.cs">
       <DependentUpon>manage_trophy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\unsoldplayers.aspx.cs">
+      <DependentUpon>unsoldplayers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\unsoldplayers.aspx.designer.cs">
+      <DependentUpon>unsoldplayers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\admin\viewplayer.aspx.cs">
+      <DependentUpon>viewplayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\admin\viewplayer.aspx.designer.cs">
+      <DependentUpon>viewplayer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -200,6 +241,13 @@
     </Compile>
     <Compile Include="Pages\team\manageteam.aspx.designer.cs">
       <DependentUpon>manageteam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\team\Soldunsold.aspx.cs">
+      <DependentUpon>Soldunsold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\team\Soldunsold.aspx.designer.cs">
+      <DependentUpon>Soldunsold.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\team\teamdashboard.aspx.cs">
       <DependentUpon>teamdashboard.aspx</DependentUpon>

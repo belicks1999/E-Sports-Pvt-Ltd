@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>View Players</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -37,12 +37,12 @@
              <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">E-Sport Pvt Ltd</a>
+      <a class="navbar-brand" href="dashboard.aspx">E-Sport Pvt Ltd</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Apply</a></li>
-         <li class="active"><a href="#">View Players</a></li>
-         <li class="active"><a href="#">View Trophy</a></li>
+      <li class="active"><a href="playerapply.aspx">Apply</a></li>
+         <li class="active"><a href="viewplayer.aspx">View Players</a></li>
+         <li class="active"><a href="viewtrophy.aspx">View Trophy</a></li>
       
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -59,10 +59,11 @@
                          <asp:BoundField DataField="name" HeaderText="Name" />
                          <asp:TemplateField HeaderText="Image">
                              <ItemTemplate>
-                                 <img src="./img/<%# Eval("img") %>" style="width:100px;height:100px;" />
+                                 <img src="./img/<%# Eval("img") %>" style="width:150px;height:200px;" />
                              </ItemTemplate>
 
                          </asp:TemplateField>
+                         <asp:BoundField DataField="tro_id" HeaderText="Trophy ID" />
                          <asp:BoundField DataField="mobile" HeaderText="Mobile" />
                          <asp:BoundField DataField="club" HeaderText="Club" />
                          <asp:BoundField DataField="role" HeaderText="Role" />
@@ -70,6 +71,8 @@
                          <asp:BoundField DataField="address" HeaderText="Address" />
                          <asp:BoundField DataField="status" HeaderText="Status" />
                          <asp:BoundField DataField="base_price" HeaderText="Base Price" />
+                         <asp:BoundField DataField="amount" HeaderText="Sold Amount" />
+                         <asp:BoundField DataField="team_name" HeaderText="Team Name" />
                      </Columns>
                      <FooterStyle BackColor="#CCCCCC" />
                      <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -85,9 +88,27 @@
 
 
 
-<h3 style="text-align:center;color:black;">All Players</h3>
-             <p style="text-align:center;color:black;">
-                 <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="162px" Width="1117px">
+<h3 style="text-align:center;color:black;">All Sold/Unsold Players</h3>
+                 <asp:GridView ID="GridView2" runat="server" BackColor="#CCCCCC" HorizontalAlign="Center" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" Height="165px" Width="1121px" AutoGenerateColumns="False">
+                     <Columns>
+                         <asp:BoundField DataField="name" HeaderText="Name" />
+                         <asp:BoundField DataField="tro_id" HeaderText="Trophy ID" />
+                         <asp:TemplateField HeaderText="Image">
+                             <ItemTemplate>
+                                 <img src="./img/<%# Eval("img") %>" style="width:150px;height:200px;" />
+                             </ItemTemplate>
+
+                         </asp:TemplateField>
+                         <asp:BoundField DataField="mobile" HeaderText="Mobile" />
+                         <asp:BoundField DataField="club" HeaderText="Club" />
+                         <asp:BoundField DataField="role" HeaderText="Role" />
+                         <asp:BoundField DataField="dob" HeaderText="Date of Birth" />
+                         <asp:BoundField DataField="address" HeaderText="Address" />
+                         <asp:BoundField DataField="status" HeaderText="Status" />
+                         <asp:BoundField DataField="base_price" HeaderText="Base Price" />
+                         <asp:BoundField DataField="amount" HeaderText="Sold Amount" />
+                         <asp:BoundField DataField="team_name" HeaderText="Team Name" />
+                     </Columns>
                      <FooterStyle BackColor="#CCCCCC" />
                      <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
                      <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
@@ -98,7 +119,6 @@
                      <SortedDescendingCellStyle BackColor="#CAC9C9" />
                      <SortedDescendingHeaderStyle BackColor="#383838" />
                  </asp:GridView>
-             </p>
              <p style="text-align:center;color:black;">
                  &nbsp;</p>
              <p style="text-align:center;color:black;">

@@ -83,11 +83,11 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
                 msg.Text = "";
                 int rowindex = ((GridViewRow)(sender as Control).NamingContainer).RowIndex;
                 int p_id = Convert.ToInt32(GridView1.Rows[rowindex].Cells[0].Text);
-                string rej = "Player rejected";
+                
                 conn.Open();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "update player set status='"+rej+"' where p_id = '" + p_id + "'";
+                cmd.CommandText = "update player set status='"+ "rejected" + "' where p_id = '" + p_id + "'";
                 cmd.ExecuteNonQuery();
                 conn.Close();
                 msg.Text = "Player rejected";

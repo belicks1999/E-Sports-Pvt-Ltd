@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace E_Sports_Pvt_Ltd.Pages.player
+namespace E_Sports_Pvt_Ltd.Pages.admin
 {
 
 
-    public partial class dashboard
+    public partial class viewplayer
     {
 
         /// <summary>
@@ -31,5 +31,14 @@ namespace E_Sports_Pvt_Ltd.Pages.player
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label uname;
+
+        /// <summary>
+        /// GridView2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView2;
     }
 }

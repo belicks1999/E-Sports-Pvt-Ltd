@@ -15,6 +15,7 @@ namespace E_Sports_Pvt_Ltd.Pages.team
         protected void Page_Load(object sender, EventArgs e)
         {
             load();
+            uname.Text = "Hello " + Session["teamname"].ToString();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -25,18 +26,29 @@ namespace E_Sports_Pvt_Ltd.Pages.team
         {
             conn.Open();
             
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from player where status = '" + "live" + "' ";
-            cmd.ExecuteNonQuery();
-            conn.Close();
+          
+            string uname = Session["teamname"].ToString();
+            // Get Username and Password from Database
+            string query = "select * from team where username = '" + uname + "'";
 
-            DataTable dt = new DataTable();
-            SqlDataAdapter db = new SqlDataAdapter(cmd);
-            db.Fill(dt);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-            conn.Close();
+            SqlDataAdapter sda = new SqlDataAdapter(query, conn);
+            DataTable dt1 = new DataTable();
+            sda.Fill(dt1);
+
+            foreach (DataRow dr in dt1.Rows)
+            {
+                string trophy = dr["trophy_id"].ToString();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from player where status = '" + "live" + "' and tro_id='"+trophy+"'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter db = new SqlDataAdapter(cmd);
+                db.Fill(dt);
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                conn.Close();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
