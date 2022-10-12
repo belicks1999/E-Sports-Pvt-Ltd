@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Auction</title>
-     <meta http-equiv="refresh" content="10"/>
+     
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -144,6 +144,12 @@ background: #82b534;
             <asp:Label ID="msgg" runat="server" style="color: #00CC00; font-size: large"></asp:Label>
         </p>
 </legend>
+
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+ <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+        <asp:Timer ID="Timer1" runat="server" OnTick="RefreshGridView" Interval="1000" />
          <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" Width="878px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="p_id" HeaderText="P_ID" />
@@ -171,6 +177,8 @@ background: #82b534;
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+        </ContentTemplate>
+</asp:UpdatePanel>
 
 
 

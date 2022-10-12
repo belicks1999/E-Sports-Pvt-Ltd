@@ -16,6 +16,7 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
         {
             load();
             loadauction();
+           
         }
 
        
@@ -47,9 +48,14 @@ namespace E_Sports_Pvt_Ltd.Pages.admin
             conn.Close();
         }
 
+        protected void RefreshGridView(object sender, EventArgs e)
+        {
+            loadauction();
+        }
+
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void select_btn_Click(object sender, EventArgs e)

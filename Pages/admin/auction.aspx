@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Auction</title>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="5"/>
+   <%-- <meta http-equiv="refresh" content="5"/>--%>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -92,6 +92,11 @@ color: #fff;" runat="server" Text="Submit" OnClick="add_btn_Click1"   />
         <h1 style="text-align:center;">Live Auction - Player
         </h1>
         <p>
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+ <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+    <ContentTemplate>
+        <asp:Timer ID="Timer1" runat="server" OnTick="RefreshGridView" Interval="1000" />
             <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" Width="878px">
                 <Columns>
                     <asp:BoundField DataField="p_id" HeaderText="P_ID" />
@@ -118,6 +123,8 @@ color: #fff;" runat="server" Text="Submit" OnClick="add_btn_Click1"   />
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#383838" />
             </asp:GridView>
+        </ContentTemplate>
+</asp:UpdatePanel>
         </p>
         <div class="col text-center">
         <asp:Button ID="sold"  class="btn btn-success btn-lg" runat="server" Text="SOLD" OnClick="sold_Click" />

@@ -17,6 +17,10 @@ namespace E_Sports_Pvt_Ltd.Pages.team
             load();
             uname.Text = "Hello " + Session["teamname"].ToString();
         }
+        protected void RefreshGridView(object sender, EventArgs e)
+        {
+            load();
+        }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
